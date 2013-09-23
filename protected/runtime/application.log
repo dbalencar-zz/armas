@@ -1,0 +1,1103 @@
+2011/11/08 18:07:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falhou ao abrir uma conecção com o banco de dados: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /var/www/yii/db/CDbConnection.php:364
+Stack trace:
+#0 /var/www/yii/db/CDbConnection.php(313): CDbConnection->open()
+#1 /var/www/yii/db/CDbConnection.php(291): CDbConnection->setActive(true)
+#2 /var/www/yii/base/CModule.php(372): CDbConnection->init()
+#3 /var/www/yii/base/CApplication.php(429): CModule->getComponent('db')
+#4 /var/www/yii/db/ar/CActiveRecord.php(609): CApplication->getDb()
+#5 /var/www/yii/db/ar/CActiveRecord.php(2275): CActiveRecord->getDbConnection()
+#6 /var/www/yii/db/ar/CActiveRecord.php(372): CActiveRecordMetaData->__construct(Object(User))
+#7 /var/www/pcam/protected/modules/user/models/User.php(28): CActiveRecord::model('User')
+#8 /var/www/pcam/protected/modules/user/components/UserIdentity.php(27): User::model()
+#9 /var/www/pcam/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#10 /var/www/yii/validators/CInlineValidator.php(39): UserLogin->authenticate('password', Array)
+#11 /var/www/yii/validators/CValidator.php(192): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#12 /var/www/yii/base/CModel.php(152): CValidator->validate(Object(UserLogin), NULL)
+#13 /var/www/pcam/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#14 /var/www/yii/web/actions/CInlineAction.php(50): LoginController->actionLogin()
+#15 /var/www/yii/web/CController.php(300): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#19 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('user/login')
+#20 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#21 /var/www/pcam/index.php(13): CApplication->run()
+#22 {main} REQUEST_URI=/pcam/index.php/user/login
+2011/11/09 17:37:40 [warning] [application] Failed to set unsafe attribute "qtde_carregador" of "baixa".
+in /var/www/pcam/protected/controllers/BaixaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2011/11/22 16:25:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo
+2011/11/22 16:26:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela
+2011/11/22 16:27:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela
+2011/11/22 16:28:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('RelCautelasVige...')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela/RelCaut...')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela/RelCautelasVigentes
+2011/11/22 16:28:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('RelCautelasBaix...')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela/RelCaut...')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela/RelCautelasBaixadas
+2011/11/22 16:49:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('delete')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo/delete')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo/delete/3?ajax=tipo-grid
+2011/11/25 17:01:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor
+2011/11/25 17:10:53 [error] [php] Trying to get property of non-object (/var/www/pcam/protected/views/cautela/cautelas_vigentes.php:32)
+Stack trace:
+#0 /var/www/yii/web/CController.php(866): CautelaController->renderFile()
+#1 /var/www/yii/web/CController.php(779): CautelaController->renderPartial()
+#2 /var/www/pcam/protected/controllers/CautelaController.php(202): CautelaController->render()
+#3 /var/www/yii/web/actions/CInlineAction.php(50): CautelaController->actionRelCautelasVigentes()
+#4 /var/www/yii/web/CController.php(300): CInlineAction->runWithParams()
+#5 /var/www/yii/web/filters/CFilterChain.php(134): CautelaController->runAction()
+#6 /var/www/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/pcam/protected/modules/rights/components/RController.php(37): RightsFilter->filter()
+#8 /var/www/yii/web/filters/CInlineFilter.php(59): CautelaController->filterRights()
+#9 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#11 /var/www/yii/web/CController.php(257): CautelaController->runActionWithFilters()
+#12 /var/www/yii/web/CWebApplication.php(277): CautelaController->run()
+#13 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController()
+#14 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#15 /var/www/pcam/index.php(13): CWebApplication->run()
+REQUEST_URI=/pcam/index.php/cautela/RelCautelasVigentes
+in /var/www/pcam/protected/views/cautela/cautelas_vigentes.php (32)
+in /var/www/pcam/protected/controllers/CautelaController.php (202)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+2011/11/25 17:11:11 [error] [php] Trying to get property of non-object (/var/www/pcam/protected/views/cautela/cautelas_vigentes.php:32)
+Stack trace:
+#0 /var/www/yii/web/CController.php(866): CautelaController->renderFile()
+#1 /var/www/yii/web/CController.php(779): CautelaController->renderPartial()
+#2 /var/www/pcam/protected/controllers/CautelaController.php(202): CautelaController->render()
+#3 /var/www/yii/web/actions/CInlineAction.php(50): CautelaController->actionRelCautelasVigentes()
+#4 /var/www/yii/web/CController.php(300): CInlineAction->runWithParams()
+#5 /var/www/yii/web/filters/CFilterChain.php(134): CautelaController->runAction()
+#6 /var/www/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/pcam/protected/modules/rights/components/RController.php(37): RightsFilter->filter()
+#8 /var/www/yii/web/filters/CInlineFilter.php(59): CautelaController->filterRights()
+#9 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#11 /var/www/yii/web/CController.php(257): CautelaController->runActionWithFilters()
+#12 /var/www/yii/web/CWebApplication.php(277): CautelaController->run()
+#13 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController()
+#14 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#15 /var/www/pcam/index.php(13): CWebApplication->run()
+REQUEST_URI=/pcam/index.php/cautela/RelCautelasVigentes
+in /var/www/pcam/protected/views/cautela/cautelas_vigentes.php (32)
+in /var/www/pcam/protected/controllers/CautelaController.php (202)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+2011/11/29 14:18:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor
+2011/11/29 14:18:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo
+2011/11/29 14:18:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma
+2011/11/29 14:18:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela
+2011/11/29 14:24:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor
+2011/11/29 14:24:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo
+2011/11/29 14:24:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma
+2011/11/29 14:25:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela
+2011/11/29 14:25:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'There must be at least one superuser!' in /var/www/pcam/protected/modules/rights/components/RAuthorizer.php:305
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/controllers/AssignmentController.php(51): RAuthorizer->getSuperusers()
+#1 /var/www/yii/web/CController.php(1143): AssignmentController->accessRules()
+#2 /var/www/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#5 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#7 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('rights')
+#8 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#9 /var/www/pcam/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/pcam/index.php/rights
+2011/11/29 14:25:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'There must be at least one superuser!' in /var/www/pcam/protected/modules/rights/components/RAuthorizer.php:305
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/controllers/AssignmentController.php(51): RAuthorizer->getSuperusers()
+#1 /var/www/yii/web/CController.php(1143): AssignmentController->accessRules()
+#2 /var/www/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#5 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#7 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('rights')
+#8 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#9 /var/www/pcam/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/pcam/index.php/rights
+2011/11/29 14:30:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor
+2011/11/29 14:30:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo
+2011/11/29 14:31:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('update')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor/update')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor/update/592
+2011/11/29 14:31:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('delete')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor/delete')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor/delete/1
+2011/11/29 15:56:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('update')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo/update')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo/update/1
+2011/12/02 09:21:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('delete')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma/delete')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma/delete/1?ajax=arma-grid
+2011/12/02 09:21:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('update')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma/update')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma/update/1
+2011/12/02 09:21:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('update')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma/update')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma/update/1
+2011/12/15 14:54:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/municao
+2011/12/15 14:56:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/municao
+2011/12/16 09:06:26 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. A declaração SQL executada foi: INSERT INTO `arm_municao` (`id_tipo`, `lote`, `nf`, `data_nf`, `quantidade`, `disponivel`, `orgao`, `usuario`, `time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, NOW()).
+in /var/www/pcam/protected/controllers/MunicaoController.php (50)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2011/12/16 09:06:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `arm_municao` (`id_tipo`, `lote`, `nf`, `data_nf`, `quantidade`, `disponivel`, `orgao`, `usuario`, `time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, NOW())' in /var/www/yii/db/CDbCommand.php:336
+Stack trace:
+#0 /var/www/yii/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /var/www/yii/db/ar/CActiveRecord.php(781): CActiveRecord->insert(NULL)
+#2 /var/www/pcam/protected/controllers/MunicaoController.php(50): CActiveRecord->save()
+#3 /var/www/yii/web/actions/CInlineAction.php(50): MunicaoController->actionCreate()
+#4 /var/www/yii/web/CController.php(300): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#9 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#11 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/web/CWebApplication.php(277): CController->run('create')
+#13 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao/create')
+#14 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#15 /var/www/pcam/index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/pcam/index.php/municao/create
+2011/12/16 09:06:53 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. A declaração SQL executada foi: INSERT INTO `arm_municao` (`id_tipo`, `lote`, `nf`, `data_nf`, `quantidade`, `disponivel`, `orgao`, `usuario`, `time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, NOW()).
+in /var/www/pcam/protected/controllers/MunicaoController.php (50)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2011/12/16 09:06:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `arm_municao` (`id_tipo`, `lote`, `nf`, `data_nf`, `quantidade`, `disponivel`, `orgao`, `usuario`, `time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, NOW())' in /var/www/yii/db/CDbCommand.php:336
+Stack trace:
+#0 /var/www/yii/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /var/www/yii/db/ar/CActiveRecord.php(781): CActiveRecord->insert(NULL)
+#2 /var/www/pcam/protected/controllers/MunicaoController.php(50): CActiveRecord->save()
+#3 /var/www/yii/web/actions/CInlineAction.php(50): MunicaoController->actionCreate()
+#4 /var/www/yii/web/CController.php(300): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#9 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#11 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/web/CWebApplication.php(277): CController->run('create')
+#13 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao/create')
+#14 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#15 /var/www/pcam/index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/pcam/index.php/municao/create
+2011/12/16 09:08:15 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. A declaração SQL executada foi: INSERT INTO `arm_municao` (`id_tipo`, `lote`, `nf`, `data_nf`, `quantidade`, `disponivel`, `orgao`, `usuario`, `time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, NOW()).
+in /var/www/pcam/protected/controllers/MunicaoController.php (50)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2011/12/16 09:08:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `arm_municao` (`id_tipo`, `lote`, `nf`, `data_nf`, `quantidade`, `disponivel`, `orgao`, `usuario`, `time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, NOW())' in /var/www/yii/db/CDbCommand.php:336
+Stack trace:
+#0 /var/www/yii/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /var/www/yii/db/ar/CActiveRecord.php(781): CActiveRecord->insert(NULL)
+#2 /var/www/pcam/protected/controllers/MunicaoController.php(50): CActiveRecord->save()
+#3 /var/www/yii/web/actions/CInlineAction.php(50): MunicaoController->actionCreate()
+#4 /var/www/yii/web/CController.php(300): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#9 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#11 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/web/CWebApplication.php(277): CController->run('create')
+#13 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao/create')
+#14 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#15 /var/www/pcam/index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/pcam/index.php/municao/create
+2011/12/16 09:17:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('delete')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor/delete')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor/delete/1?ajax=servidor-grid
+2011/12/16 09:42:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('delete')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela/delete')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela/delete/1?ajax=cautela-grid
+2011/12/28 10:08:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/municao
+2011/12/28 10:08:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela
+2011/12/28 10:08:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo
+2011/12/28 10:08:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('delete')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma/delete')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma/delete/2?ajax=arma-grid
+2011/12/28 10:08:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('update')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma/update')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma/update/2
+2011/12/28 10:08:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('view')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('arma/view')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/arma/2
+2012/01/06 14:48:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('create')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela/create')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela/create
+2012/01/17 09:36:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('view')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor/view')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor/1031
+2012/01/17 09:38:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('create')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor/create')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor/create
+2012/01/17 09:38:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo
+2012/01/17 09:38:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/municao
+2012/01/17 10:55:26 [warning] [application] Failed to set unsafe attribute "qtde_carregador" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 10:55:26 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:00:23 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:03:48 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:07:06 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:12:11 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:14:58 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:17:32 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:19:02 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:26:46 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (77)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:28:54 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:34:08 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:41:38 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:42:32 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:44:41 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:45:44 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:47:40 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:48:34 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:49:11 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:51:06 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:51:58 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:52:52 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:53:37 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:54:24 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:57:54 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 11:59:08 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 12:00:07 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 12:00:47 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 12:02:56 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 12:04:00 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 12:05:21 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 12:06:41 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 12:07:42 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/17 16:12:20 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 08:25:15 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 08:26:05 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 08:26:29 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 08:27:11 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 10:17:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela
+2012/01/19 10:17:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('municao')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/municao
+2012/01/19 10:18:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('tipo')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/tipo
+2012/01/19 20:16:37 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:16:57 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:17:11 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:17:26 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:17:42 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:17:55 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:18:10 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:18:26 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:18:38 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:18:53 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:19:07 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:19:20 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:19:38 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:19:53 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:20:07 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:20:21 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:20:37 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:20:52 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:21:06 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:21:20 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/19 20:21:33 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/01/20 09:49:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('cautela')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/cautela
+2012/01/24 15:16:18 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (77)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/02 17:03:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/pcam/protected/modules/rights/components/RController.php:63
+Stack trace:
+#0 /var/www/pcam/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /var/www/yii/web/filters/CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 /var/www/pcam/protected/modules/rights/components/RController.php(37): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/web/filters/CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 /var/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/web/CController.php(283): CFilterChain->run()
+#6 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#8 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('servidor')
+#9 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /var/www/pcam/index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/pcam/index.php/servidor
+2012/02/02 17:06:51 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:39:39 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:39:53 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:41:26 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:41:40 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:42:00 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:46:13 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:47:01 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:48:48 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:50:18 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:51:18 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:51:28 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:52:17 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:54:42 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:57:03 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/09 16:58:03 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/02/28 14:46:25 [warning] [application] Failed to set unsafe attribute "id_municao" of "cautela".
+in /var/www/pcam/protected/controllers/CautelaController.php (49)
+in /var/www/pcam/protected/modules/rights/components/RController.php (37)
+in /var/www/pcam/index.php (13)
+2012/12/19 15:31:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falhou ao abrir uma conecção com o banco de dados: SQLSTATE[28000] [1045] Access denied for user 'pcam'@'localhost' (using password: YES)' in /var/www/yii/db/CDbConnection.php:364
+Stack trace:
+#0 /var/www/yii/db/CDbConnection.php(313): CDbConnection->open()
+#1 /var/www/yii/db/CDbConnection.php(291): CDbConnection->setActive(true)
+#2 /var/www/yii/base/CModule.php(372): CDbConnection->init()
+#3 /var/www/yii/base/CApplication.php(429): CModule->getComponent('db')
+#4 /var/www/yii/db/ar/CActiveRecord.php(609): CApplication->getDb()
+#5 /var/www/yii/db/ar/CActiveRecord.php(2275): CActiveRecord->getDbConnection()
+#6 /var/www/yii/db/ar/CActiveRecord.php(372): CActiveRecordMetaData->__construct(Object(User))
+#7 /var/www/pcam/protected/modules/user/models/User.php(28): CActiveRecord::model('User')
+#8 /var/www/pcam/protected/modules/user/components/UserIdentity.php(27): User::model()
+#9 /var/www/pcam/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#10 /var/www/yii/validators/CInlineValidator.php(39): UserLogin->authenticate('password', Array)
+#11 /var/www/yii/validators/CValidator.php(192): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#12 /var/www/yii/base/CModel.php(152): CValidator->validate(Object(UserLogin), NULL)
+#13 /var/www/pcam/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#14 /var/www/yii/web/actions/CInlineAction.php(50): LoginController->actionLogin()
+#15 /var/www/yii/web/CController.php(300): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/web/CWebApplication.php(277): CController->run('')
+#19 /var/www/yii/web/CWebApplication.php(136): CWebApplication->runController('user/login')
+#20 /var/www/yii/base/CApplication.php(158): CWebApplication->processRequest()
+#21 /var/www/pcam/index.php(13): CApplication->run()
+#22 {main} REQUEST_URI=/armas/index.php/user/login
